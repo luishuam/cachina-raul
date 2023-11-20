@@ -10,13 +10,14 @@ USE cachina_7814;
 DROP TABLE IF EXISTS cachina_7814.Producto;
 CREATE TABLE cachina_7814.Producto (
     id INT auto_increment,
-    nombre_pro VARCHAR(30) NOT NULL,
-    descripcion_pro VARCHAR(120) NOT NULL,
+    nombre_prod VARCHAR(30) NOT NULL,
+    descripcion_prod VARCHAR(120) NOT NULL,
+    fecha_obtencion date NOT NULL,
     precio DECIMAL(10, 2) DEFAULT '0.00' NOT NULL,
 	stock int NOT NULL,
-    estado_pro BIT NOT NULL,
+    estado_prod BIT NOT NULL,
 	CONSTRAINT productos_pk PRIMARY KEY (id),
-	CONSTRAINT mascotas_check CHECK (stock>=0)
+	CONSTRAINT productos_check CHECK (stock>=0)
 );
 
 -- Creación de la tabla Proveedor
@@ -38,22 +39,23 @@ CREATE TABLE cachina_7814.Proveedor(
 
 -- Insercion de data a tabla producto
 INSERT INTO `cachina_7814`.`producto`
-(`nombre_pro`,
-`descripcion_pro`,
+(`nombre_prod`,
+`descripcion_prod`,
+`fecha_obtencion`,
 `precio`,
 `stock`,
-`estado_pro`)
+`estado_prod`)
 VALUES
-('Celulares','Celulares rotos',66.25,4,1),
-('TV CRT','Televisores CRT del 1988',100.25,55,1), 
-('TV moderno','Televisores plasma',145,22,1), 
-('Computadoras','Ordenadores sovieticos',5.50,5,1), 
-('Autos','autos chatarra',400,50,1), 
-('Relojes','gran variedad de relojes antiguos, de cuerda, con carga manual.',15,50,1),
-('Camiones','camiones quemados',500.50,50,1), 
-('Joyas y chatarra','objetos de valor rotos',60,60,1),
-('Discos de musica','discos de vinilo, de época de todos los géneros musicales',9.90,45,1), 
-('Decoraciones','cosas esotericas y bellas',88,88,1) 
+('Celulares','Celulares rotos','2022-01-18',66.25,4,1),
+('TV CRT','Televisores CRT del 1988','2022-11-18',100.25,55,1), 
+('TV moderno','Televisores plasma','2023-05-10',145,22,1), 
+('Computadoras','Ordenadores sovieticos','2021-07-07',5.50,5,1), 
+('Autos','autos chatarra','2023-11-01',400,50,1), 
+('Relojes','gran variedad de relojes antiguos, de cuerda, con carga manual.','2023-10-28',15,50,1),
+('Camiones','camiones quemados','2023-03-09',500.50,50,1), 
+('Joyas y chatarra','objetos de valor rotos','2023-11-11',60,60,1),
+('Discos de musica','discos de vinilo, de época de todos los géneros musicales','2023-09-17',9.90,45,1), 
+('Decoraciones','cosas esotericas y bellas','2023-08-02',88,88,1) 
 ;
 
 -- Insercion de data a tabla proveedor
