@@ -27,11 +27,10 @@ CREATE TABLE cachina_7814.Proveedor(
 	id INT NOT NULL auto_increment,
     nombre_prove VARCHAR(50) NOT NULL,
     descripcion_prove VARCHAR(255) NOT NULL,
-    dni_prove CHAR(8) NOT NULL,
+    dni_prove CHAR(8) UNIQUE NOT NULL,
 	categoria VARCHAR(60) NOT NULL,
     estado_prove BIT NOT NULL,
-	CONSTRAINT prove_pk PRIMARY KEY (id),
-	CONSTRAINT prove_un UNIQUE KEY (nombre_prove,dni_prove)
+	CONSTRAINT prove_pk PRIMARY KEY (id)
 );
 
 -- Creación de la tabla ""
@@ -73,10 +72,10 @@ VALUES
 ('Hina Misora','Nos trae mucho papel a reciclar','98742563','Recolectora de mangas',1),
 ('Maria Del Barrio','Nos trae ropa del siglo 20','78214536','Recolectora de ropa',1),
 ('Valentino Garavani','nos trae utensilios de cocina de cualquier epoca','78214530','Recolector de menaje',1),
-('Maria Gonzales Tosi','nos trae ropa militar vieja para vender','78214536','Recolectora de ropa militar',1),
-('Mario De la torre','Nos da juguetes viejos y que nadie quiere, tambien figuras','78214536','Recolector de juguetes',1),
-('Melania Holzhauser','desde botellas hasta trozos de plastico nos vende','78214536','Recolectora de plasticos',1),
-('Marco de Aguas','muchas peliculas viejas','78214536','Recolector de DVD',1)
+('Maria Gonzales Tosi','nos trae ropa militar vieja para vender','78214532','Recolectora de ropa militar',1),
+('Mario De la torre','Nos da juguetes viejos y que nadie quiere, tambien figuras','78214539','Recolector de juguetes',1),
+('Melania Holzhauser','desde botellas hasta trozos de plastico nos vende','78214111','Recolectora de plasticos',1),
+('Marco de Aguas','muchas peliculas viejas','78214537','Recolector de DVD',1)
 ;
 
 select * from producto;
