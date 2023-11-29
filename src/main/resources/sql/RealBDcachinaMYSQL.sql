@@ -7,8 +7,8 @@ CREATE DATABASE cachina_7814;
 -- Usar la base de datos recién creada
 USE cachina_7814;
 -- Creación de la tabla PRODUCTO
-DROP TABLE IF EXISTS cachina_7814.Producto;
-CREATE TABLE cachina_7814.Producto (
+DROP TABLE IF EXISTS cachina_7814.producto;
+CREATE TABLE cachina_7814.producto (
     id INT auto_increment,
     nombre_prod VARCHAR(30) NOT NULL,
     descripcion_prod VARCHAR(120) NOT NULL,
@@ -21,9 +21,9 @@ CREATE TABLE cachina_7814.Producto (
 );
 
 -- Creación de la tabla Proveedor
-DROP TABLE IF EXISTS cachina_7814.Proveedor;
+DROP TABLE IF EXISTS cachina_7814.proveedor;
 
-CREATE TABLE cachina_7814.Proveedor(
+CREATE TABLE cachina_7814.proveedor(
 	id INT NOT NULL auto_increment,
     nombre_prove VARCHAR(50) NOT NULL,
     descripcion_prove VARCHAR(255) NOT NULL,
