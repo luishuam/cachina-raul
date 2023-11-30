@@ -33,7 +33,6 @@ public class ProductoController {
 
     // return productoRepository.findAll();
     // }
-
     /* Listado filtrando status */
     @GetMapping
     public List<Producto> listAll() {
@@ -93,7 +92,6 @@ public class ProductoController {
     // productoRepository.deleteById(id);
 
     // }
-
     /* Soft Delete */
     @DeleteMapping("{id}")
     public String deleteByEstado(@PathVariable Long id) {
